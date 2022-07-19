@@ -1,0 +1,141 @@
+.navbar {
+	display: flex;
+	align-items: flex-start;
+	justify-content: space-between;
+	padding: var(--padding);
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 99999999;
+	font-family: "Inter", sans-serif;
+}
+.logo {
+	width: 10rem;
+	cursor: pointer;
+}
+.logo img {
+	width: 10rem;
+}
+.navLinks {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.link {
+	padding: 1rem 2rem;
+	position: relative;
+}
+.link a {
+	transition: 250ms all;
+}
+.link a:hover {
+	color: var(--e64);
+}
+.menuBtn {
+	display: none;
+	background: none;
+	border: none;
+	padding: 1rem 2rem;
+	border-radius: 0.5rem;
+	cursor: pointer;
+	transition: 250ms all;
+}
+.menuBtn > svg {
+	color: var(--white);
+	font-size: 3rem;
+	transition: 250ms all;
+}
+.menuBtn > svg:hover {
+	color: var(--e64);
+}
+.otherNavbar {
+	padding: 1rem 5rem;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.otherNavbar > .logo > img {
+	max-width: 6rem;
+}
+.tooltip {
+	display: none;
+	position: absolute;
+	bottom: -3rem;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 20rem;
+	text-align: center;
+}
+.link > a:hover .tooltip {
+	display: block;
+	color: var(--white);
+}
+@media screen and (max-width: 1018px) {
+	.navbar {
+		align-items: center;
+	}
+	.navLinks {
+		display: none;
+	}
+	.menuBtn {
+		display: block;
+		z-index: 9999999999999;
+	}
+	.mobileMenu {
+		display: flex;
+		align-items: flex-start;
+		justify-content: flex-start;
+		flex-direction: column;
+		background: rgba(255, 255, 255, 20%);
+		backdrop-filter: blur(2rem);
+		position: fixed;
+		top: 0rem;
+		right: 0;
+		height: 100%;
+		width: 100%;
+		padding-top: 7rem;
+	}
+	.mobileMenu > li {
+		width: 100%;
+		padding: 3rem 2rem;
+	}
+	.mobileMenu > li > a {
+		width: 100%;
+		transition: 250ms all;
+		cursor: pointer;
+	}
+	.mobileMenu > li:hover {
+		background-image: linear-gradient(to right, var(--e64), var(--ffa));
+	}
+	.mobileMenu > li:hover > a {
+		color: var(--white);
+	}
+	.mobileMenu > li > a {
+		font-size: 2rem;
+		font-weight: 500;
+	}
+	.mobileMenuBtn {
+		position: fixed;
+		right: 2rem;
+	}
+}
+@media screen and (max-width: 723px) {
+	.navbar {
+		padding: 0rem 3rem;
+	}
+}
+@media screen and (max-width: 425px) {
+	.logo img {
+		width: 6rem;
+	}
+	.otherNavbar {
+		padding: 1rem 2rem;
+	}
+	.otherNavbar > .logo img {
+		width: 9rem;
+	}
+	.mobileMenu > li:hover {
+		background-image: none;
+	}
+}

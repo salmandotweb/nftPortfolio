@@ -1,0 +1,139 @@
+.servicesSection {
+	position: relative;
+	width: 100%;
+	overflow: hidden;
+}
+.blob {
+	position: absolute;
+	top: 0rem;
+	left: -0rem;
+	z-index: -1;
+	/* width: 100rem; */
+}
+.object {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+}
+.servicesContainer {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+.trial {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: -1;
+}
+.service {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: clamp(110rem, 0px, 90%);
+}
+.reverse {
+	flex-direction: row-reverse;
+}
+.content > h1 {
+	font-size: 3.2rem;
+	text-transform: uppercase;
+}
+.content > p {
+	margin-top: 1rem;
+	font-size: 2rem;
+}
+@media screen and (max-width: 1130px) {
+	.service {
+		width: 90%;
+	}
+}
+@media screen and (max-width: 1070px) {
+	.content > h3 {
+		font-size: 2.8rem;
+	}
+	.content > p {
+		font-size: 1.8rem;
+		line-height: 2.2rem;
+	}
+	.service > img {
+		width: 40rem;
+	}
+	.trial {
+		width: 86rem;
+	}
+}
+@media screen and (max-width: 1008px) {
+	.trial {
+		display: none;
+	}
+	.service > img {
+		width: 35rem;
+	}
+}
+@media screen and (max-width: 890px) {
+	.service {
+		flex-direction: column;
+		/* background: rgba(255, 255, 255, 20%); */
+		/* backdrop-filter: blur(1rem); */
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+		/* border-radius: 2rem; */
+		padding: 4rem;
+		width: 90%;
+	}
+	.service:not(:last-child) {
+		margin-bottom: 2rem;
+	}
+	.service > img {
+		width: 25rem;
+	}
+	.servicesContainer {
+		margin-top: 4rem;
+	}
+}
+@media screen and (max-width: 730px) {
+	.object {
+		display: none;
+	}
+}
+@media screen and (max-width: 521px) {
+	.content > h1 {
+		font-size: 2rem;
+	}
+	.service {
+		padding: 2rem;
+	}
+	.service > img {
+		width: 20rem;
+	}
+	.content > p {
+		font-size: 1.7rem;
+	}
+}
+@media screen and (max-width: 375px) {
+	.content > h1 {
+		font-size: 1.8rem;
+	}
+	.service {
+		padding: 2rem;
+	}
+	.service > img {
+		width: 15rem;
+	}
+	.content > p {
+		font-size: 1.6rem;
+	}
+}
+@media screen and (max-width: 364px) {
+	.content > p {
+		font-size: 1.6rem;
+	}
+	.service {
+		padding: 1rem;
+	}
+}

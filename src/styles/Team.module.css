@@ -1,0 +1,78 @@
+.teamSection {
+	padding: 3rem 0;
+}
+.blob {
+	position: absolute;
+	left: 50%;
+	top: 200%;
+	transform: translateX(-50%);
+	z-index: -1;
+	width: 100%;
+}
+.cardsContainer {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+	margin: 6rem auto 0rem auto;
+	grid-gap: 3rem;
+	overflow: hidden;
+	width: 100%;
+}
+.teamCard {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	background: rgb(255, 255, 255, 20%);
+	padding: 2rem;
+	border-radius: 1.5rem;
+	max-width: 37rem;
+	font-family: "Inter", sans-serif;
+}
+.teamImage {
+	width: 25rem;
+	height: auto;
+}
+.teamImage > img {
+	border-radius: 1rem;
+	width: 100%;
+}
+.teamInfo {
+	padding-top: 1rem;
+}
+.socialLinks {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding-top: 1rem;
+}
+.socialLinks svg {
+	font-size: 2.2rem;
+	cursor: pointer;
+	transition: 250ms all;
+}
+.socialLinks svg:hover {
+	color: var(--e64);
+}
+.socialLinks svg:not(:last-child) {
+	margin-right: 0.6rem;
+}
+@media screen and (max-width: 1440px) {
+	.teamSection {
+		position: relative;
+	}
+	.blob {
+		top: -100%;
+	}
+}
+@media screen and (max-width: 1286px) {
+	.blob {
+		top: -30rem;
+	}
+}
+@media screen and (max-width: 640px) {
+	.blob {
+		display: none;
+	}
+}
