@@ -4,7 +4,7 @@ import { useAnimation } from "framer-motion";
 
 const useScrollAnimation = () => {
 	const [ref, inView] = useInView({
-		threshold: 0.4,
+		threshold: 0.22,
 	});
 	const animation = useAnimation();
 
